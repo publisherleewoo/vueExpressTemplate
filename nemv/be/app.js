@@ -5,8 +5,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 
-
-
 var app = express();
 
 // view engine setup
@@ -22,7 +20,7 @@ console.log(path.join(__dirname, 'fe', 'dist'))
 // join이라는 메서드는, 윈도우 os에서는 경로가 c:\ 이런식으로 url의 /와 반대되는 \를 사용한다
 //그래서 통일시켜주기위해 join이라는 메서드를 사용한다.
 
-app.use('/api', require('./routes/set'));
+app.use('/api', require('./routes/api'));
 
 
 // catch 404 and forward to error handler
